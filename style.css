@@ -1245,7 +1245,7 @@ img {
     }
 
        /* =========================================
-   MOBILE — 2 / 2 / 2 / 1 PHOTO WALL
+   MOBILE — SIMPLE 2 / 2 / 2 / 1 PHOTO GRID
 ========================================= */
 
 .photo-grid {
@@ -1256,22 +1256,21 @@ img {
 
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 18px 14px;
+    gap: 16px;
 
     padding: 5px 8px 60px;
 }
 
 
 /* =========================================
-   ALL PHOTO CARDS
+   ALL PHOTOS — EXACT SAME SIZE
 ========================================= */
 
 .photo {
-    position: relative;
-
     width: 100%;
+    height: 180px;
 
     padding: 6px;
 
@@ -1284,15 +1283,17 @@ img {
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.30);
 
-    z-index: 1;
+    transform: none;
+
+    position: relative;
 }
 
 
 .photo img {
-    display: block;
-
     width: 100%;
     height: 100%;
+
+    display: block;
 
     object-fit: cover;
 
@@ -1301,97 +1302,71 @@ img {
 
 
 /* =========================================
-   ROW 1 — TWO SMALL
+   ROW 1 — PHOTO 3 + PHOTO 4
 ========================================= */
 
 .photo-large {
     grid-column: 1;
     grid-row: 1;
-
-    height: 120px;
-
-    transform: rotate(-1deg);
 }
 
+
+/* PHOTO 4 */
 
 .photo-small {
     grid-column: 2;
     grid-row: 1;
-
-    height: 120px;
-
-    transform: rotate(1deg);
 }
 
 
 /* =========================================
-   ROW 2 — TWO BIG
+   ROW 2 — PHOTO 5 + PHOTO 6
 ========================================= */
 
 .photo-tall {
     grid-column: 1;
     grid-row: 2;
-
-    height: 235px;
-
-    transform: rotate(-0.7deg);
 }
 
 
 .photo-wide {
     grid-column: 2;
     grid-row: 2;
-
-    height: 235px;
-
-    transform: rotate(0.7deg);
 }
 
 
 /* =========================================
-   ROW 3 — TWO SMALL
+   ROW 3 — PHOTO 7 + PHOTO 8
 ========================================= */
 
 .photo-medium {
     grid-column: 1;
     grid-row: 3;
-
-    height: 120px;
-
-    transform: rotate(0.8deg);
 }
 
 
 .photo-portrait {
     grid-column: 2;
     grid-row: 3;
-
-    height: 120px;
-
-    transform: rotate(-0.8deg);
 }
 
 
 /* =========================================
-   ROW 4 — ONE MEDIUM
+   ROW 4 — PHOTO 9
 ========================================= */
 
 .photo-final {
     grid-column: 1 / 3;
     grid-row: 4;
 
-    width: 72%;
+    width: 180px;
 
-    height: 185px;
-
-    margin: 4px auto 0;
-
-    transform: rotate(-0.6deg);
+    margin: 0 auto;
 }
 
 
 /* =========================================
-   PHONE — KEEP EVERYTHING STILL
+   MOBILE — NO ROTATION / NO OVERLAP
 ========================================= */
 
 .photo:hover {
