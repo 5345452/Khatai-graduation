@@ -1245,27 +1245,27 @@ img {
     }
 
        /* =========================================
-   MOBILE — LUXURY PHOTO WALL
+   MOBILE — 2 / 2 / 2 / 1 PHOTO WALL
 ========================================= */
 
 .photo-grid {
     width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    column-gap: 14px;
-    row-gap: 22px;
+    gap: 18px 14px;
 
-    padding: 5px 5px 60px;
-
-    align-items: start;
+    padding: 5px 8px 60px;
 }
 
 
 /* =========================================
-   PHOTO CARDS
+   ALL PHOTO CARDS
 ========================================= */
 
 .photo {
@@ -1284,7 +1284,7 @@ img {
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.30);
 
-    transform: none;
+    z-index: 1;
 }
 
 
@@ -1301,14 +1301,14 @@ img {
 
 
 /* =========================================
-   ROW 1
-   TWO SMALL PHOTOS
+   ROW 1 — TWO SMALL
 ========================================= */
 
 .photo-large {
     grid-column: 1;
+    grid-row: 1;
 
-    height: 125px;
+    height: 120px;
 
     transform: rotate(-1deg);
 }
@@ -1316,45 +1316,47 @@ img {
 
 .photo-small {
     grid-column: 2;
+    grid-row: 1;
 
-    height: 125px;
+    height: 120px;
 
     transform: rotate(1deg);
 }
 
 
 /* =========================================
-   ROW 2
-   TWO BIG PHOTOS
+   ROW 2 — TWO BIG
 ========================================= */
 
 .photo-tall {
     grid-column: 1;
+    grid-row: 2;
 
     height: 235px;
 
-    transform: rotate(-0.8deg);
+    transform: rotate(-0.7deg);
 }
 
 
 .photo-wide {
     grid-column: 2;
+    grid-row: 2;
 
     height: 235px;
 
-    transform: rotate(0.8deg);
+    transform: rotate(0.7deg);
 }
 
 
 /* =========================================
-   ROW 3
-   TWO SMALL PHOTOS
+   ROW 3 — TWO SMALL
 ========================================= */
 
 .photo-medium {
     grid-column: 1;
+    grid-row: 3;
 
-    height: 125px;
+    height: 120px;
 
     transform: rotate(0.8deg);
 }
@@ -1362,22 +1364,23 @@ img {
 
 .photo-portrait {
     grid-column: 2;
+    grid-row: 3;
 
-    height: 125px;
+    height: 120px;
 
     transform: rotate(-0.8deg);
 }
 
 
 /* =========================================
-   ROW 4
-   FINAL MEDIUM PHOTO
+   ROW 4 — ONE MEDIUM
 ========================================= */
 
 .photo-final {
     grid-column: 1 / 3;
+    grid-row: 4;
 
-    width: 70%;
+    width: 72%;
 
     height: 185px;
 
@@ -1388,7 +1391,7 @@ img {
 
 
 /* =========================================
-   PHONE — NO HOVER
+   PHONE — KEEP EVERYTHING STILL
 ========================================= */
 
 .photo:hover {
