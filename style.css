@@ -471,20 +471,24 @@ img {
    LUXURY EDITORIAL PHOTO WALL
 ========================================= */
 
-/* =========================================
-   PHOTO WALL — EDITORIAL COLLAGE
-========================================= */
-
 .photo-grid {
+    width: min(100%, 1100px);
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 75px);
+    grid-template-columns: 1fr 0.55fr 1fr;
 
-    column-gap: 14px;
-    row-gap: 14px;
+    grid-template-rows:
+        260px
+        190px
+        260px;
 
-    padding: 10px 2vw 70px;
+    column-gap: 28px;
+    row-gap: 22px;
+
+    padding: 10px 20px 90px;
 }
 
 
@@ -495,7 +499,7 @@ img {
 .photo {
     position: relative;
 
-    padding: 8px;
+    padding: 9px;
 
     background: #f5f1e9;
 
@@ -504,7 +508,7 @@ img {
     overflow: hidden;
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.28);
+        0 18px 40px rgba(0, 0, 0, 0.30);
 
     transition:
         transform 0.5s ease,
@@ -512,6 +516,7 @@ img {
 
     z-index: 1;
 }
+
 
 .photo img {
     width: 100%;
@@ -523,91 +528,92 @@ img {
 
     border-radius: 2px;
 
-    transition: transform 0.7s ease;
+    transition:
+        transform 0.7s cubic-bezier(.2,.8,.2,1);
 }
 
 
 /* =========================================
-   01 — LARGE ANCHOR
+   LEFT — LARGE PHOTO 1
 ========================================= */
 
 .photo-large {
-    grid-column: 1 / 7;
-    grid-row: 1 / 6;
+    grid-column: 1;
+    grid-row: 1 / 3;
 
-    transform: rotate(-1deg);
+    transform: rotate(-0.8deg);
 }
 
 
 /* =========================================
-   02 — SMALL
+   CENTER — SMALL PHOTO 1
 ========================================= */
 
 .photo-small {
-    grid-column: 8 / 11;
-    grid-row: 1 / 4;
+    grid-column: 2;
+    grid-row: 1;
 
-    transform: rotate(1.5deg);
+    transform: rotate(1deg);
 }
 
 
 /* =========================================
-   03 — TALL
+   RIGHT — LARGE PHOTO 1
 ========================================= */
 
 .photo-tall {
-    grid-column: 10 / 13;
-    grid-row: 3 / 7;
+    grid-column: 3;
+    grid-row: 1 / 3;
 
-    transform: rotate(-1deg);
+    transform: rotate(-0.7deg);
 }
 
 
 /* =========================================
-   04 — WIDE
+   CENTER — SMALL PHOTO 2
 ========================================= */
 
 .photo-wide {
-    grid-column: 2 / 7;
-    grid-row: 6 / 9;
+    grid-column: 2;
+    grid-row: 2;
 
-    transform: rotate(0.8deg);
+    transform: rotate(-0.8deg);
 }
 
 
 /* =========================================
-   05 — MEDIUM
+   LEFT — LARGE PHOTO 2
 ========================================= */
 
 .photo-medium {
-    grid-column: 7 / 10;
-    grid-row: 6 / 9;
+    grid-column: 1;
+    grid-row: 3;
 
-    transform: rotate(-1.2deg);
+    transform: rotate(0.7deg);
 }
 
 
 /* =========================================
-   06 — PORTRAIT
+   CENTER — SMALL PHOTO 3
 ========================================= */
 
 .photo-portrait {
-    grid-column: 10 / 13;
-    grid-row: 7 / 11;
+    grid-column: 2;
+    grid-row: 3;
 
     transform: rotate(0.8deg);
 }
 
 
 /* =========================================
-   07 — FINAL
+   RIGHT — LARGE PHOTO 2
 ========================================= */
 
 .photo-final {
-    grid-column: 4 / 9;
-    grid-row: 9 / 12;
+    grid-column: 3;
+    grid-row: 3;
 
-    transform: rotate(-0.7deg);
+    transform: rotate(-0.8deg);
 }
 
 
@@ -617,19 +623,18 @@ img {
 
 .photo:hover {
     transform:
-        translateY(-6px)
+        translateY(-7px)
         rotate(0deg);
 
     box-shadow:
-        0 25px 50px rgba(0, 0, 0, 0.38);
+        0 28px 55px rgba(0, 0, 0, 0.40);
 
-    z-index: 10;
+    z-index: 5;
 }
 
 .photo:hover img {
     transform: scale(1.035);
 }
-
 /* =========================================
    THE AUDACITY
 ========================================= */
@@ -1239,29 +1244,30 @@ img {
         letter-spacing: -4px;
     }
 
-        /* =========================================
-       MOBILE — CUTE EDITORIAL PHOTO WALL
-    ========================================= */
-
-    /* =========================================
-   MOBILE PHOTO WALL
+       /* =========================================
+   MOBILE — ELEGANT PHOTO WALL
 ========================================= */
 
 .photo-grid {
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 
-    gap: 16px;
+    column-gap: 14px;
+    row-gap: 18px;
 
-    padding: 5px 2vw 50px;
+    padding: 5px 3px 55px;
 }
 
 
-/* PHOTO CARD */
+/* =========================================
+   MOBILE PHOTO CARDS
+========================================= */
 
 .photo {
-    width: auto;
+    position: relative;
 
     padding: 6px;
 
@@ -1269,93 +1275,122 @@ img {
 
     border-radius: 3px;
 
+    overflow: hidden;
+
     box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.28);
+        0 12px 28px rgba(0, 0, 0, 0.30);
 }
 
 
-/* LARGE */
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   LARGE LEFT
+========================================= */
 
 .photo-large {
-    grid-column: 1 / 3;
+    grid-column: 1;
+    grid-row: span 2;
 
-    height: 300px;
+    height: 250px;
 
-    transform: rotate(-0.8deg);
+    transform: rotate(-0.7deg);
 }
 
 
-/* SMALL */
+/* =========================================
+   SMALL RIGHT
+========================================= */
 
 .photo-small {
-    grid-column: 1 / 2;
+    grid-column: 2;
 
-    height: 175px;
+    height: 115px;
 
-    transform: rotate(1.2deg);
+    transform: rotate(1deg);
 }
 
 
-/* TALL */
+/* =========================================
+   LARGE RIGHT
+========================================= */
 
 .photo-tall {
-    grid-column: 2 / 3;
+    grid-column: 2;
+    grid-row: span 2;
 
-    height: 245px;
+    height: 250px;
 
-    transform: rotate(-0.8deg);
+    transform: rotate(-0.7deg);
 }
 
 
-/* WIDE */
+/* =========================================
+   SMALL LEFT
+========================================= */
 
 .photo-wide {
-    grid-column: 1 / 3;
+    grid-column: 1;
 
-    height: 190px;
+    height: 115px;
 
     transform: rotate(0.7deg);
 }
 
 
-/* MEDIUM */
+/* =========================================
+   LARGE LEFT
+========================================= */
 
 .photo-medium {
-    grid-column: 1 / 2;
+    grid-column: 1;
+    grid-row: span 2;
 
-    height: 175px;
+    height: 250px;
 
-    transform: rotate(-1deg);
+    transform: rotate(-0.7deg);
 }
 
 
-/* PORTRAIT */
+/* =========================================
+   SMALL RIGHT
+========================================= */
 
 .photo-portrait {
-    grid-column: 2 / 3;
+    grid-column: 2;
 
-    height: 235px;
+    height: 115px;
 
     transform: rotate(0.8deg);
 }
 
 
-/* FINAL */
+/* =========================================
+   FINAL LARGE
+========================================= */
 
 .photo-final {
     grid-column: 1 / 3;
 
-    width: 78%;
+    width: 72%;
 
-    height: 245px;
+    height: 190px;
 
-    margin: 10px auto 0;
+    margin: 4px auto 0;
 
     transform: rotate(-0.6deg);
 }
 
 
-/* NO HOVER EFFECT ON PHONE */
+/* =========================================
+   PHONE — NO HOVER
+========================================= */
 
 .photo:hover {
     transform: none;
