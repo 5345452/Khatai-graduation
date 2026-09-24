@@ -440,7 +440,124 @@ img {
 
     opacity: 0.5;
 }
+/* =========================================
+   GRADUATION COUNTDOWN
+========================================= */
 
+.countdown-section {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10vw 8vw;
+
+    background: #080808;
+
+    text-align: center;
+}
+
+
+.countdown-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.countdown-content h2 {
+    margin-top: 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(5rem, 10vw, 10rem);
+
+    font-weight: 300;
+
+    line-height: 0.75;
+
+    letter-spacing: -5px;
+}
+
+
+.countdown-content h2 span {
+    opacity: 0.45;
+}
+
+
+.countdown-date {
+    margin-top: 45px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.55;
+}
+
+
+/* COUNTDOWN NUMBERS */
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    max-width: 800px;
+
+    margin: 70px auto 0;
+
+    border-top: 1px solid rgba(245, 241, 233, 0.15);
+    border-bottom: 1px solid rgba(245, 241, 233, 0.15);
+}
+
+
+.countdown-item {
+    padding: 35px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    border-right: 1px solid rgba(245, 241, 233, 0.15);
+}
+
+
+.countdown-item:last-child {
+    border-right: none;
+}
+
+
+.countdown-item strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+.countdown-item span {
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+}
+
+
+.countdown-location {
+    margin-top: 40px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.4;
+}
 
 /* =========================================
    PHOTO STORY
@@ -1227,7 +1344,75 @@ img {
         font-size: clamp(5rem, 18vw, 7rem);
         letter-spacing: -4px;
     }
+/* =========================================
+   COUNTDOWN — MOBILE
+========================================= */
 
+.countdown-section {
+    min-height: 75vh;
+
+    padding: 25% 8%;
+}
+
+
+.countdown-content h2 {
+    font-size: clamp(5rem, 20vw, 7rem);
+
+    letter-spacing: -4px;
+}
+
+
+.countdown-date {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+
+    line-height: 1.8;
+}
+
+
+.countdown {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 55px;
+}
+
+
+.countdown-item {
+    padding: 25px 10px;
+}
+
+
+.countdown-item:nth-child(1),
+.countdown-item:nth-child(2) {
+    border-bottom: 1px solid rgba(245, 241, 233, 0.15);
+}
+
+
+.countdown-item:nth-child(2) {
+    border-right: none;
+}
+
+
+.countdown-item strong {
+    font-size: 3.5rem;
+}
+
+
+.countdown-item span {
+    font-size: 6px;
+
+    letter-spacing: 2px;
+}
+
+
+.countdown-location {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.8;
+}
 
        /* PHOTO STORY */
 
