@@ -1734,14 +1734,18 @@ img {
     }
 
     .audacity-content h2 {
-        margin-top: 15px;
+    margin-top: 15px;
 
-        font-size: clamp(4rem, 19vw, 6rem);
-        line-height: 0.85;
-        letter-spacing: -3px;
+    font-size: clamp(3.2rem, 16vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -2px;
 
-        white-space: nowrap;
-    }
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+
+    box-sizing: border-box;
+}
 
     .audacity-content p:last-child {
         max-width: 300px;
