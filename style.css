@@ -1714,3 +1714,41 @@ img {
     }
 
 }
+/* =========================================
+   THE AUDACITY — MOBILE FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    .audacity-section {
+        min-height: 100svh;
+        height: 100svh;
+        padding: 0 20px;
+    }
+
+    .audacity-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .audacity-content h2 {
+        margin-top: 15px;
+
+        font-size: clamp(4rem, 19vw, 6rem);
+        line-height: 0.85;
+        letter-spacing: -3px;
+
+        white-space: nowrap;
+    }
+
+    .audacity-content p:last-child {
+        max-width: 300px;
+
+        margin: 30px auto 0;
+
+        font-size: 18px;
+        line-height: 1.35;
+    }
+}
