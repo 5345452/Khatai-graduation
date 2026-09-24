@@ -799,10 +799,15 @@ img {
 .audacity-content {
     position: relative;
     z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    text-align: center;
 }
 
 .audacity-content h2 {
-    margin-top: 25px;
+    margin: 25px 0 0;
 
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(6rem, 14vw, 14rem);
@@ -810,6 +815,8 @@ img {
 
     line-height: 0.7;
     letter-spacing: -7px;
+
+    text-align: center;
 }
 
 .audacity-content p:last-child {
@@ -822,8 +829,9 @@ img {
     line-height: 1.4;
 
     opacity: 0.8;
-}
 
+    text-align: center;
+}
 
 /* =========================================
    STORYTELLER
@@ -1430,24 +1438,6 @@ img {
     }
 
        
-    /* AUDACITY */
-
-    .audacity-section {
-        min-height: 700px;
-    }
-
-    .audacity-content {
-        padding: 0 8vw;
-    }
-
-    .audacity-content h2 {
-        font-size: clamp(6rem, 24vw, 10rem);
-        letter-spacing: -5px;
-    }
-
-    .audacity-content p:last-child {
-        font-size: 19px;
-    }
 
 
     /* STORYTELLER */
@@ -1715,44 +1705,77 @@ img {
 
 }
 /* =========================================
-   THE AUDACITY — MOBILE FIX
+   THE AUDACITY — MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
 
     .audacity-section {
-        min-height: 100svh;
+        width: 100%;
         height: 100svh;
-        padding: 0 20px;
+        min-height: 600px;
+
+        padding: 0;
+        margin: 0;
+
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
     }
 
     .audacity-content {
         width: 100%;
         max-width: 100%;
-        padding: 0 10px;
+
+        margin: 0;
+        padding: 0;
+
+        text-align: center;
+
         box-sizing: border-box;
     }
 
     .audacity-content h2 {
-    margin-top: 15px;
+        width: 100%;
+        max-width: 100%;
 
-    font-size: clamp(3.2rem, 16vw, 5rem);
-    line-height: 0.9;
-    letter-spacing: -2px;
+        margin: 0;
+        padding: 0;
 
-    width: 100%;
-    text-align: center;
-    white-space: normal;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 12vw;
+        font-weight: 300;
 
-    box-sizing: border-box;
-}
+        line-height: 1;
+        letter-spacing: -1px;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        box-sizing: border-box;
+    }
 
     .audacity-content p:last-child {
-        max-width: 300px;
+        width: 90%;
+        max-width: 290px;
 
         margin: 30px auto 0;
+        padding: 0;
 
+        font-family: "Cormorant Garamond", serif;
         font-size: 18px;
+
         line-height: 1.35;
+
+        text-align: center;
+
+        opacity: 0.8;
+
+        box-sizing: border-box;
     }
 }
